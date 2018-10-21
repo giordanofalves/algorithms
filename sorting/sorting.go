@@ -5,17 +5,17 @@ import "fmt"
 type sort []int
 
 func newSorting() sort {
-	numbers := []int{5, 2, 4, 6, 1, 3}
+	numbers := []int{6, 10, 4, 9, 1, 3, 2, 8, 5, 7}
 
 	return numbers
 }
 
 func (s sort) insertion() {
-	for j := 2; j < len(s); j++ {
+	for j := 1; j < len(s); j++ {
 		key := s[j]
 		i := j - 1
 
-		for i > 0 && s[i] > key {
+		for i > -1 && s[i] > key {
 			s[i+1] = s[i]
 			i = i - 1
 		}
